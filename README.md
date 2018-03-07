@@ -17,9 +17,14 @@ We used the below setup to connect the PIR sensor to a Photon particle.
 
 ![publish message](https://raw.githubusercontent.com/imjuoy/Intrusion-Detection-System-using-Passive-Infrared-Sensors-and-SMTP/master/Setup.jpg)
 
-Then we used ThingSpeak to publish the signals of the PIR sensor captured by respective pins of the Particle Photon. Once the signals were published in to the cloud
-we used a simple web client to relay the signals to an HTML GUI.
-We also implemented a mail client that would send emails to configured mail id's based on the frequency of intrusions.
+Just for demo purpose we also used an led to show how we can use signals from the photon to blink an led ( which could be a light alarm in the real world).
+As can be seen below this was the final setup and we used code written in particle to flash lights on the LED based on signals from the PIR sensor.
 
-This project is therefore a end to end implementation of an intrusion detection system based using PIR sensors, Particle Photon, ThingsSpeak and SMTP.
+![publish message](https://raw.githubusercontent.com/imjuoy/Intrusion-Detection-System-using-Passive-Infrared-Sensors-and-SMTP/master/Setup_Final.png)
+
+Then we used Mosquitto MQTT client to publish the messages from the photon particle. Once the signals were published to the Mosquitto message broker
+we used a simple web client to relay the messages to an HTML GUI.
+We also implemented a mail client using SMTP that would send emails to configured mail id's based on the frequency of intrusions.
+
+This project is therefore a end to end implementation of an intrusion detection system based using PIR sensors, Particle Photon, LED, Mosquitto and SMTP.
 
