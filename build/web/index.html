@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intrusion System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            ul {
+                list-style:none;
+            }
+            ul li:first-child {
+                background-color: red;
+            }
+            ul li {
+                padding: 5px 5px;
+                border: 1px solid black;
+            }
+            .list {
+                width:50%;
+            }
+            marquee {
+                color:red;
+                font-size:30px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h2>Intrusion System</h2>
+        <div class="list">
+            <ul id = "timelist">
+                <li>Intrusion Timestamp</li>
+            </ul>
+        </div>
+        <script src="mqttws31.js" type="text/javascript"></script>
+        <script src="subscriber.js" type="text/javascript"></script>
+    </body>
+</html>
